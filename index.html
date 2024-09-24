@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sexy Weather App</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #FF416C, #FF4B2B);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    /* Navbar Styles */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 100;
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      margin-left: 20px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin-right: 20px;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #FF416C;
+    }
+
+    /* Weather App Card Styles */
+    .weather-app {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+      width: 300px;
+      margin-top: 100px; /* Added margin for navbar space */
+    }
+
+    .location {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .temperature {
+      font-size: 60px;
+      font-weight: 700;
+      margin: 20px 0;
+    }
+
+    .condition {
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+
+    .icon {
+      margin-top: 20px;
+    }
+
+    img {
+      width: 100px;
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .details div {
+      font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul li a {
+        font-size: 16px;
+      }
+
+      .weather-app {
+        width: 90%;
+      }
+
+      .temperature {
+        font-size: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar Section -->
+  <nav>
+    <div class="logo">Weather App</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Forecast</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Weather App Section -->
+  <div class="weather-app">
+    <div class="location">New York, USA</div>
+    <div class="temperature">24°C</div>
+    <div class="condition">Sunny</div>
+    <div class="icon">
+      <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="weather icon">
+    </div>
+    <div class="details">
+      <div>Wind: 10 km/h</div>
+      <div>Humidity: 55%</div>
+    </div>
+  </div>
+
+</body>
+</html>
